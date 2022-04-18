@@ -7,7 +7,6 @@ import org.springframework.boot.runApplication
 class YshShopProjectApiApplication
 
 fun main(args: Array<String>) {
-	println("sdfe");
 	runApplication<YshShopProjectApiApplication>(*args)
 
 }
