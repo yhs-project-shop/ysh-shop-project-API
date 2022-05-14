@@ -26,12 +26,16 @@ class WebSecurityConfig(disableDefaults: Boolean=true) : WebSecurityConfigurerAd
 
 //    @Override
     override fun configure(http: HttpSecurity) {
-        http.cors()
-            .and()
+        http.cors().and()
             .authorizeHttpRequests()
             // 어떤 요청이든 인증
             .antMatchers("/sss")
             .authenticated()
+
+            .and()
+            .httpBasic().disable()
+            .csrf().disable()
+
     }
 
 

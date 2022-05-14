@@ -11,8 +11,8 @@ class User (userRequestDto: SignupRequestDto) {
     var id : Long? = 0
     val userId : String = userRequestDto.userId
     val password : String = userRequestDto.password
-    val phoneNumber : String = userRequestDto.phoneNumber
-    val address : String = userRequestDto.address
+    val phoneNumber : String = ""
+    val address : String = ""
     val role : Role = Role.CUSTOMER
     val name : String = userRequestDto.name
     val email : String = userRequestDto.email

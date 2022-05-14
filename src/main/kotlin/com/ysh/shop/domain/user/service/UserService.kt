@@ -40,8 +40,6 @@ class UserService(
             return idCheck(value)
         } else if (target.equals("email")) {
             return emailCheck(value)
-        } else if (target.equals("phoneNumber")) {
-            return phoneNumberCheck(value)
         }else throw IllegalAccessException("올바른 target이 아닙니다.")
     }
 
@@ -51,10 +49,6 @@ class UserService(
 
     fun emailCheck(email: String): Boolean {
         return userRepository.countAllByEmail(email) == 0L
-    }
-
-    fun phoneNumberCheck(phoneNum: String): Boolean {
-        return userRepository.countAllByPhoneNumber(phoneNum) == 0L
     }
 
     fun loadUserByUserId(userId: String): User {

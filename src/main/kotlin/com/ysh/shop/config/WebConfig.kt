@@ -13,9 +13,10 @@ class WebConfig(private val jwtProvider: JwtProvider) : WebMvcConfigurer {
 
     override fun addCorsMappings(registry: CorsRegistry) {
         registry.addMapping("/**")
+
             .allowedOrigins("*")
-            .allowedMethods("POST","GET","DELETE")
-            .allowCredentials(false)
+            .allowedMethods("*")
+
     }
     @Bean
     fun jwtAuthFilter():FilterRegistrationBean<Filter>{
