@@ -23,5 +23,9 @@ class Product (productDto: RequestProductDto) {
     val description : String = productDto.description
     val createAt : OffsetDateTime = OffsetDateTime.now()
     var updateAt : OffsetDateTime = OffsetDateTime.now();
-    val deleteAt : OffsetDateTime? = null;
+    var deleteAt : OffsetDateTime? = null;
+
+    fun delete(){
+        deleteAt = OffsetDateTime.now()
+    }
 }
